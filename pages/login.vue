@@ -4,15 +4,13 @@
     <form @submit.prevent="login(form)">
 
       <label for="">
-        Email
-        <input type="email" v-model="form.email">
+        <input type="email" v-model="form.email" placeholder="Email">
       </label>
       <label for="">
-        Mot de passe
-        <input type="password" v-model="form.password">
+        <input type="password" v-model="form.password" placeholder="Mot de passe">
       </label>
 
-      <button type="submit" class="btn">Se connecter</button>
+      <button type="submit" class="btn bg-gray-500">Se connecter</button>
     </form>
 
     <p>Pas de compte ?
@@ -26,7 +24,7 @@
 
 definePageMeta({
   layout: "centered",
-  middleware: ["guest"],
+  // middleware: ["guest"],
 });
 
 

@@ -3,29 +3,25 @@
     <h1>Inscription</h1>
     <form @submit.prevent="register(form)">
       <label for="">
-        Nom et prénom
-        <input type="text" v-model="form.name">
+        <input type="text" v-model="form.name" placeholder="Nom et prénom">
       </label>
       <label for="">
-        Email
-        <input type="email" v-model="form.email">
+        
+        <input type="email" v-model="form.email" placeholder="Email">
       </label>
       <label for="">
-        Mot de passe
-        <input type="password" v-model="form.password">
+        <input type="password" v-model="form.password" placeholder="Mot de passe">
       </label>
       <label for="">
-        Confirmer Mot de passe
-        <input type="password" v-model="form.password_confirmation">
+        <input type="password" v-model="form.password_confirmation" placeholder="Confirmer Mot de passe">
       </label>
 
-      <button type="submit" class="btn">S'inscrire</button>
+      <button type="submit" class="btn bg-gray-500">S'inscrire</button>
     </form>
 
     <p>Avez-vous déjà un compte ?
       <NuxtLink to="/login" class="underline text-lime-600">Connectez-vous !</NuxtLink>
     </p>
-
   </div>
 </template>
 
@@ -51,11 +47,11 @@ const form = ref<RegisterPayload>({
   password_confirmation: "",
 });
 
-// async function register(payload: RegisterPayload) {
-//   const res = await axios.post('/register', payload)
-//   console.log(res)
+async function register(payload: RegisterPayload) {
+  const res = await axios.post('/register', payload)
+  console.log(form)
 
-// }
+}
 
 </script>
 

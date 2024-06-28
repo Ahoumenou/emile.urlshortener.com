@@ -1,5 +1,5 @@
 <template>
-    <div class="text-4xl">Hello Nuxt ✔🐱‍🚀🐱‍👓</div>
+    <div class="text-4xl">Hello Word</div>
 </template>
 
 <script>
